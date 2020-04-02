@@ -1,0 +1,11 @@
+[Unit]
+Description=Cooler fan controller
+
+[Service]
+ExecStart=/home/pi/cooler/cooler_control.py
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+ExecStop=/bin/kill $MAINPID
+
+[Install]
+WantedBy=default.target
