@@ -8,4 +8,4 @@ it creates a textfile that shows the current CPU temperature. The file is update
 it checks for a file named 'on' in its directory. If the file exists, the cooler runs regardless of the CPU temperature. This is for manual toggle of the cooler
 
 ### important note about disk IO:
-this script writes about 4KB in each iteration. In the current configuration where it iterates every 5 seconds, it writes about 1/2GB per month. This contributes to wearing down of the disk. Therefore, you may want to change the location of the fan_state file to a RAM-based location, e.g. /tmp.
+this script writes about 4KB worth of data on disk in each iteration. In the current configuration where it iterates every 5 seconds, it writes about 1/2GB per month. This contributes to gradual wearing down of the drive. Therefore, you may want to change the location of the fan_state file to a RAM-based location, e.g. /tmp.
